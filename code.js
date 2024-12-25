@@ -41,6 +41,16 @@ function playGame(){
     for(let i = 0; i < 5; i++){
         playRound(getHumanChoice(), getComputerChoice());
     }
+    
+    if(humanScore > computerScore){
+        alert("You are the overall winner!")
+    }
+    else if(computerScore > humanScore){
+        alert("The computer wins overall...")
+    }
+    else{
+        alert("It's a tie overall...")
+    }
 }
 
 humanScore = 0
