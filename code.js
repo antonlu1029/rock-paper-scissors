@@ -27,15 +27,13 @@ else lose!
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase()
     if(((humanChoice === "rock") && (computerChoice === "scissors")) || ((humanChoice === "paper") && (computerChoice === "rock")) || ((humanChoice === "scissors") && (computerChoice === "paper"))){
-        humanScore++
-        alert(`You Won! Computer's move: ${computerChoice}`)
+        alert(`You Won!\nYour move: ${humanChoice}\nComputer's move: ${computerChoice}\nYour Score: ${++humanScore}\nComputer's Score: ${computerScore}`)
     }
     else if(humanChoice === computerChoice){
         alert("It's a tie!")
     }
     else{
-        alert(`You Lost! Computer's move: ${computerChoice}`)
-        computerScore++
+        alert(`You Lost...\nYour move: ${humanChoice}\nComputer's move: ${computerChoice}\nYour Score: ${humanScore}\nComputer's Score: ${++computerScore}`)
     }
 }
 
